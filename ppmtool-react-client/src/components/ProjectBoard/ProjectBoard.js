@@ -38,6 +38,12 @@ class ProjectBoard extends Component {
                             {errors.projectNotFound}
                         </div>
                     );
+                } else if (errors.projectIdentifier){
+                    return(
+                        <div className="alert alert-danger text-center" role="alert">
+                            {errors.projectIdentifier}
+                        </div>
+                    );
                 } else {
                     return (
                         <div className="alert alert-info text-center" role="alert">
@@ -58,7 +64,7 @@ class ProjectBoard extends Component {
                 <br />
                 <hr />
                 {BoardWarning}
-                <Backlog project_tasks_prop={project_tasks} />;
+                <Backlog project_tasks_prop={project_tasks} />
             </div>
         )
         
